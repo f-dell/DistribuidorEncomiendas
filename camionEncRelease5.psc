@@ -111,41 +111,21 @@ Algoritmo Ej
 						Mostrar "El camion numero 3 tiene una disponibilidad de carga de ", cargaDisponibleCam3 ," kg"
 					FinSi
 					
-					Si cargaDisponibleCam1 >= 0 o cargaDisponibleCam2 >= 0 y cargaDisponibleCam3 > 0 Entonces					
+					Si (cargaDisponibleCam1 >= 0) y (cargaDisponibleCam2 >= 0) y (cargaDisponibleCam3 > 0) Entonces				
 						Mostrar "El camion ", numCamion, " tiene una carga de ", acuPeso, " kg en ", cantEncom, " encomiendas"
 						numCamion <- numCamion + 1					
 						cantEncom <- 1
 						acuPeso <- pesoEncomienda
 						Mostrar "Se asigna la carga al camion numero ", numCamion, " que acumula ", cantEncom, " encomiendas con un peso de ", acuPeso, " kg"
 					SiNo
-						Si cargaDisponibleCam3 == 0 y cargaDisponibleCam1 > 0 o cargaDisponibleCam2 > 0 Entonces
+						Si cargaDisponibleCam3 == 0 Entonces
 							Mostrar "No es posible asignarle esta carga"
 							Mostrar "Vuelva a ingresar la carga para que se asigne a otro de los camiones si cuenta con disponibilidad para la misma"
-								
-							Si cargaDisponibleCam1 > 0 y pesoEncomienda <= cargaDisponibleCam1 Entonces
-								cantEncomCam1 <- cantEncomCam1 + 1
-								acuPeso <- acuPeso - pesoEncomienda
-								Mostrar "Se cargo la encomienda numero ", cantEncomCam1, " en el camion ", numCamion - 2									
-								Mostrar "El camion asignado es el numero ", numCamion - 2
-								cargaDisponibleCam1 <- cargaDisponibleCam1 - pesoEncomienda
-								Mostrar "Carga disponible camion 1 ", cargaDisponibleCam1, " kg"
-								Mostrar "El peso cargado hasta el momento en el camion numero ", numCamion - 2," es de ", 200 - cargaDisponibleCam1, " kg"							
-								cont1 <- cont1 + 1
-							FinSi
-							Si cargaDisponibleCam2 > 0 y cont1 == 0 Entonces
-								cantEncomCam2 <- cantEncomCam2 + 1						
-								acuPeso <- acuPeso - pesoEncomienda
-								Mostrar "Se cargo la encomienda numero ", cantEncomCam2, " en el camion ", numCamion - 1									
-								Mostrar "El camion asignado es el numero ", numCamion - 1
-								cargaDisponibleCam2 <- cargaDisponibleCam2 - pesoEncomienda
-								Mostrar "Carga disponible camion 1 ", cargaDisponibleCam2, " kg"
-								Mostrar "El peso cargado hasta el momento en el camion numero ", numCamion - 1," es de ", 200 - cargaDisponibleCam2, " kg"								
-							FinSi					
-							cont1 <- 0							
+							cantEncom <- 1
+							acuPeso <- pesoEncomienda
 						FinSi
-						
-					FinSi
-						
+					FinSi				
+					
 				FinSi				
 				
 				Leer pesoEncomienda		
