@@ -1,12 +1,9 @@
-//Hacer un programa para ingresar los valores de los pesos de distintas encomiendas que se deben enviar a
-//distintos clientes y que finaliza cuando se ingresa un peso negativo. Se deben agrupar las encomiendas en
-//camiones que pueden transportar hasta 200 kilos en total.
-//Por ejemplo: 10, 20, 140 , 70, 100 , 40, 10, 50, 80 , 90, 30, 40 , 50 , -10.
-//Camión 1 Cam. 2 Cam. 3 Cam. 4 Cam. 5
-//Se pide determinar e informar:
-//a) El número de cada camión y peso total de encomiendas. (Camión 1: 170 kg, Camión 2: 170 kg)
-//b) El número de camión que transporta mayor cantidad de encomiendas. (En el ejemplo anterior sería el
-//Camión 3 con 4 encomiendas)
+//Realizar un algoritmo que contabilice las cargas de encomiendas en tres camiones los cuales admiten como maximo una carga de 200 kg cada uno
+//Si el peso de una encomienca supera el maximo permitido en un camion se asigna la carga al proximo camion y, si en las sucesivas encomiendas el
+//peso de alguna de ellas esta dentro del rango que admite alguno de los camiones anteriores, dicha encomienda, debe asignarse al primer camion que 
+//cuente con disponibilidad de carga. Al alcanzar los maximos permitidos en todos los camiones se debe informar que no hay mas disponiblidad de carga y
+//finalizar el proceso. Para concluir la carga de encomiendas si aun hay disponibilidad de carga en alguno de los tres camiones se debe ingresar una 
+//carga con valor negativo.
 
 Algoritmo Ej
 	Definir numCamion, cantEncom Como Entero
